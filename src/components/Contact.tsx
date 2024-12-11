@@ -52,12 +52,17 @@ const Contact = () => {
         </div>
 
         {/* Contact Information */}
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="flex flex-col items-center justify-center space-y-6 text-center">
           <div className="flex items-center gap-3">
-            <MapPin className="text-primary" size={24} />
+            <Mail className="text-primary" size={24} />
             <div>
-              <h4 className="font-semibold">Location</h4>
-              <p className="text-gray-600">Gaborone, Botswana</p>
+              <h4 className="font-semibold">Email</h4>
+              <a 
+                href="mailto:info@motswanaintelligence.tech" 
+                className="text-gray-400 hover:text-primary transition-colors duration-200"
+              >
+                info@motswanaintelligence.tech
+              </a>
             </div>
           </div>
           
@@ -65,15 +70,20 @@ const Contact = () => {
             <Phone className="text-primary" size={24} />
             <div>
               <h4 className="font-semibold">Phone</h4>
-              <p className="text-gray-600">+267 XXXX XXXX</p>
+              <a 
+                href="tel:+26774442120" 
+                className="text-gray-400 hover:text-primary transition-colors duration-200"
+              >
+                +267 74442120
+              </a>
             </div>
           </div>
           
           <div className="flex items-center gap-3">
-            <Mail className="text-primary" size={24} />
+            <MapPin className="text-primary" size={24} />
             <div>
-              <h4 className="font-semibold">Email</h4>
-              <p className="text-gray-600">info@motswanaintelligence.com</p>
+              <h4 className="font-semibold">Location</h4>
+              <p className="text-gray-400">Gaborone, Botswana</p>
             </div>
           </div>
         </div>
