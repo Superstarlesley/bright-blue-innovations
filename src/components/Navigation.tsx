@@ -26,7 +26,6 @@ const Navigation = () => {
             Motswana Intelligence
           </a>
 
-          {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
             <a href="#about" className="nav-link">
               About
@@ -40,35 +39,34 @@ const Navigation = () => {
             <button className="button-primary">Let's Talk</button>
           </div>
 
-          {/* Mobile Menu Button */}
           <button
             className="md:hidden text-secondary"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            aria-label="Toggle menu"
           >
             {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>
 
-        {/* Mobile Navigation */}
         {isMobileMenuOpen && (
-          <div className="md:hidden pt-4 pb-6 space-y-4">
+          <div className="md:hidden pt-4 pb-6 space-y-4 animate-fade-in">
             <a
               href="#about"
-              className="block py-2 text-secondary-light hover:text-secondary"
+              className="block py-2 text-secondary-light hover:text-secondary transition-colors"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               About
             </a>
             <a
               href="#services"
-              className="block py-2 text-secondary-light hover:text-secondary"
+              className="block py-2 text-secondary-light hover:text-secondary transition-colors"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Services
             </a>
             <a
               href="#contact"
-              className="block py-2 text-secondary-light hover:text-secondary"
+              className="block py-2 text-secondary-light hover:text-secondary transition-colors"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Contact

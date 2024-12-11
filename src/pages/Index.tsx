@@ -4,7 +4,7 @@ import Services from "../components/Services";
 
 const Index = () => {
   return (
-    <main className="min-h-screen">
+    <main className="min-h-screen bg-background">
       <Navigation />
       <Hero />
       <Services />

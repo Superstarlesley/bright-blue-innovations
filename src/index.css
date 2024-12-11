@@ -11,11 +11,9 @@
     --ring: 224 71.4% 4.1%;
     --radius: 0.75rem;
   }
-}
 
-@layer base {
   * {
-    @apply border-border;
+    @apply border-border scroll-smooth;
   }
 
   body {
