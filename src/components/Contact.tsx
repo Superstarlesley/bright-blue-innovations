@@ -1,4 +1,5 @@
-import { Mail, Phone, MapPin } from "lucide-react";
+
+import { Mail, Phone, MapPin, Code } from "lucide-react";
 
 const Contact = () => {
   return (
@@ -10,30 +11,34 @@ const Contact = () => {
           {/* Thuto Leseane */}
           <div className="glass-card p-8 rounded-xl">
             <h3 className="text-2xl font-bold mb-4">Thuto Leseane</h3>
-            <p className="text-gray-600 mb-4">Co-Founder & Technical Lead</p>
+            <p className="text-gray-600 mb-4">Product Manager</p>
             <p className="text-gray-600 mb-6">
-              Software engineer specializing in AI and machine learning solutions for African businesses.
+              Background in entrepreneurship, qualified AI marketer, and excellent product manager.
             </p>
             <div className="flex items-center gap-2 text-primary">
               <Mail size={20} />
-              <a href="mailto:thuto@motswanaintelligence.com" className="hover:underline">
-                thuto@motswanaintelligence.com
+              <a href="mailto:info@motswanaintelligence.tech" className="hover:underline">
+                info@motswanaintelligence.tech
               </a>
             </div>
           </div>
 
-          {/* Kago Moilwa */}
+          {/* Thabo Mahumba Michael */}
           <div className="glass-card p-8 rounded-xl">
-            <h3 className="text-2xl font-bold mb-4">Kago Moilwa</h3>
-            <p className="text-gray-600 mb-4">Co-Founder & Business Development</p>
+            <h3 className="text-2xl font-bold mb-4">Thabo Mahumba Michael</h3>
+            <p className="text-gray-600 mb-4">Head of Software Engineering</p>
             <p className="text-gray-600 mb-6">
-              Business strategist focused on expanding technology adoption across Botswana.
+              Proficient in HTML, CSS, JavaScript, Tailwind CSS, ReactJS, and NextJS.
             </p>
             <div className="flex items-center gap-2 text-primary">
               <Mail size={20} />
-              <a href="mailto:kago@motswanaintelligence.com" className="hover:underline">
-                kago@motswanaintelligence.com
+              <a href="mailto:michael@motswanaintelligence.tech" className="hover:underline">
+                michael@motswanaintelligence.tech
               </a>
+            </div>
+            <div className="flex items-center gap-2 mt-2">
+              <Code size={20} className="text-primary" />
+              <span className="text-gray-600">HTML, CSS, JS, Tailwind, React, Next.js</span>
             </div>
           </div>
         </div>
