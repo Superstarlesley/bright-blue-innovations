@@ -123,27 +123,6 @@ const AboutUs = () => {
           </div>
         </div>
       </div>
-
-      <style jsx>{`
-        .highlight-word::after {
-          content: '';
-          position: absolute;
-          bottom: -2px;
-          left: 0;
-          width: 0;
-          height: 2px;
-          background: linear-gradient(90deg, #0071E3, #0077ED);
-          transition: width 0.8s ease-out;
-        }
-        
-        .highlight-word.animate-highlight::after {
-          width: 100%;
-        }
-        
-        .highlight-word.animate-highlight {
-          text-shadow: 0 0 20px rgba(0, 113, 227, 0.3);
-        }
-      `}</style>
     </section>
   );
 };
