@@ -35,6 +35,9 @@ const Navigation = () => {
             <a href="#services" className="text-white/70 hover:text-white transition-colors text-sm lg:text-base">
               Services
             </a>
+            <a href="/careers" className="text-white/70 hover:text-white transition-colors text-sm lg:text-base">
+              Join the Team
+            </a>
             <a href="#contact" className="text-white/70 hover:text-white transition-colors text-sm lg:text-base">
               Contact
             </a>
@@ -67,6 +70,13 @@ const Navigation = () => {
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Services
+            </a>
+            <a
+              href="/careers"
+              className="block py-2 text-white/70 hover:text-white transition-colors"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              Join the Team
             </a>
             <a
               href="#contact"
