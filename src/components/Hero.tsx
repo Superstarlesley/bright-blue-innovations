@@ -1,6 +1,6 @@
 
 import { useEffect, useRef } from "react";
-import { ChevronRight, Sparkles } from "lucide-react";
+import { ChevronRight } from "lucide-react";
 
 const Hero = () => {
   const titleRef = useRef<HTMLHeadingElement>(null);
@@ -48,14 +48,8 @@ const Hero = () => {
       <div className="absolute top-1/2 left-1/4 w-16 h-16 bg-primary/5 rounded-full blur-lg animate-pulse delay-500"></div>
 
       <div className="container max-w-7xl mx-auto text-center relative z-10">
-        {/* Badge */}
-        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-primary/20 to-blue-600/20 text-primary text-sm font-medium mb-8 opacity-0 animate-fade-up border border-primary/30 backdrop-blur-sm">
-          <Sparkles className="w-4 h-4" />
-          Botswana-Based SaaS Solutions
-        </div>
-        
         {/* Main Content */}
-        <div className="mb-12 opacity-0 animate-fade-up [animation-delay:200ms]">
+        <div className="mb-12 opacity-0 animate-fade-up">
           <div className="mb-6">
             <h1
               ref={titleRef}
@@ -70,7 +64,11 @@ const Hero = () => {
           </div>
 
           <p className="text-xl sm:text-2xl text-white/90 max-w-4xl mx-auto mb-12 font-light leading-relaxed drop-shadow-lg">
-            Smart, scalable software solutions for real-world industries. Closing the technology gap for businesses that run Botswana's economy.
+            Smart, scalable software solutions for real-world industries. Closing the technology gap for 
+            <span className="font-bold bg-gradient-to-r from-primary to-blue-400 bg-clip-text text-transparent px-2">
+              Botswana-Based
+            </span>
+            businesses that run Botswana's economy.
           </p>
         </div>
 
