@@ -96,10 +96,10 @@ const Contact = () => {
               <Mail className="text-primary mx-auto mb-4" size={32} />
               <h4 className="font-semibold text-white mb-2 text-lg">Email</h4>
               <a 
-                href="mailto:info@motswanaintelligence.tech" 
+                href="mailto:superstarlesley@gmail.com" 
                 className="text-slate-300 hover:text-primary transition-colors duration-200 break-all"
               >
-                info@motswanaintelligence.tech
+                superstarlesley@gmail.com
               </a>
             </div>
             

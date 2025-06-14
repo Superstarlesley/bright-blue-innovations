@@ -30,7 +30,7 @@ const handler = async (req: Request): Promise<Response> => {
     // Send notification to company email
     const emailResponse = await resend.emails.send({
       from: "Motswana Intelligence <onboarding@resend.dev>",
-      to: ["info@motswanaintelligence.tech"],
+      to: ["superstarlesley@gmail.com"],
       subject: "New Meeting Booking - Motswana Intelligence",
       html: `
         <h2>New Meeting Booking</h2>
