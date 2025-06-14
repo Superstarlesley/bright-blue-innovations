@@ -1,6 +1,7 @@
 
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
+import ContactForm from "./ContactForm";
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -49,9 +50,7 @@ const Navigation = () => {
             <a href="#contact" className="text-white/70 hover:text-white transition-colors text-sm lg:text-base">
               Contact
             </a>
-            <button className="bg-primary hover:bg-primary-hover text-white font-bold py-2 px-4 lg:px-6 rounded-lg transition-colors text-sm lg:text-base">
-              Let's Talk
-            </button>
+            <ContactForm />
           </div>
 
           <button
@@ -102,9 +101,9 @@ const Navigation = () => {
             >
               Contact
             </a>
-            <button className="bg-primary hover:bg-primary-hover text-white font-bold py-2 px-6 rounded-lg transition-colors w-full">
-              Let's Talk
-            </button>
+            <div className="pt-2">
+              <ContactForm />
+            </div>
           </div>
         )}
       </div>
