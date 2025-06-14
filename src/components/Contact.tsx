@@ -1,5 +1,6 @@
 
 import { Mail, Phone, MapPin, Linkedin } from "lucide-react";
+import ContactForm from "./ContactForm";
 
 const Contact = () => {
   const teamMembers = [
@@ -84,6 +85,11 @@ const Contact = () => {
         <div className="text-center">
           <h3 className="text-3xl font-bold text-white mb-8">Get In Touch</h3>
           <p className="text-slate-300 mb-8 text-lg">Ready to transform your business? Let's discuss your project.</p>
+          
+          {/* Let's Talk Button */}
+          <div className="mb-12">
+            <ContactForm />
+          </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
             <div className="bg-white/5 backdrop-blur-md border border-white/10 p-6 rounded-xl text-center">
