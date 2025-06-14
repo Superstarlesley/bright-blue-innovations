@@ -40,7 +40,7 @@ const Hero = () => {
         {/* Badge */}
         <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-primary/20 to-blue-600/20 text-primary text-sm font-medium mb-8 opacity-0 animate-fade-up border border-primary/30 backdrop-blur-sm">
           <Sparkles className="w-4 h-4" />
-          Welcome to Motswana Intelligence
+          Botswana-Based SaaS Solutions
         </div>
         
         {/* Main Content */}
@@ -58,8 +58,8 @@ const Hero = () => {
             </h1>
           </div>
 
-          <p className="text-xl sm:text-2xl text-white/70 max-w-3xl mx-auto mb-12 font-light leading-relaxed">
-            Transforming Botswana's future through intelligent software solutions
+          <p className="text-xl sm:text-2xl text-white/70 max-w-4xl mx-auto mb-12 font-light leading-relaxed">
+            Smart, scalable software solutions for real-world industries. Closing the technology gap for businesses that run Botswana's economy.
           </p>
         </div>
 
@@ -67,27 +67,27 @@ const Hero = () => {
         <div className="opacity-0 animate-fade-up [animation-delay:600ms]">
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-8">
             <button className="group bg-gradient-to-r from-primary to-blue-600 hover:from-primary-hover hover:to-blue-700 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-primary/25 flex items-center gap-2 text-lg">
-              Explore Our Services
+              Explore Our Solutions
               <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
             </button>
             <button className="group bg-white/10 hover:bg-white/20 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 backdrop-blur-md border border-white/20 hover:border-white/30 text-lg">
-              Get in Touch
+              Start Your Digital Journey
             </button>
           </div>
 
           {/* Stats/Features */}
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 mt-16 max-w-4xl mx-auto">
             <div className="text-center">
-              <div className="text-3xl font-bold text-primary mb-2">AI</div>
-              <div className="text-white/60 text-sm uppercase tracking-wider">Powered Solutions</div>
+              <div className="text-3xl font-bold text-primary mb-2">6+</div>
+              <div className="text-white/60 text-sm uppercase tracking-wider">Industries Served</div>
             </div>
             <div className="text-center">
               <div className="text-3xl font-bold text-primary mb-2">100%</div>
-              <div className="text-white/60 text-sm uppercase tracking-wider">Botswana Focused</div>
+              <div className="text-white/60 text-sm uppercase tracking-wider">Mobile-Friendly</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-primary mb-2">24/7</div>
-              <div className="text-white/60 text-sm uppercase tracking-wider">Support</div>
+              <div className="text-3xl font-bold text-primary mb-2">No-Code</div>
+              <div className="text-white/60 text-sm uppercase tracking-wider">Fast Development</div>
             </div>
           </div>
         </div>
