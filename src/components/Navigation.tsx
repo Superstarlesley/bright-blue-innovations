@@ -21,29 +21,30 @@ const Navigation = () => {
         isScrolled ? "bg-gray-900/90 backdrop-blur-md border-b border-white/10" : "bg-transparent"
       }`}
     >
-      <div className="container mx-auto px-6 py-4">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-4">
         <div className="flex items-center justify-between">
-          <a href="/" className="text-2xl font-bold text-white">
-            Motswana Intelligence
+          <a href="/" className="text-lg sm:text-xl lg:text-2xl font-bold text-white">
+            <span className="hidden sm:inline">Motswana Intelligence</span>
+            <span className="sm:hidden">MI</span>
           </a>
 
-          <div className="hidden md:flex items-center space-x-8">
-            <a href="#about" className="text-white/70 hover:text-white transition-colors">
+          <div className="hidden md:flex items-center space-x-6 lg:space-x-8">
+            <a href="#about" className="text-white/70 hover:text-white transition-colors text-sm lg:text-base">
               About
             </a>
-            <a href="#services" className="text-white/70 hover:text-white transition-colors">
+            <a href="#services" className="text-white/70 hover:text-white transition-colors text-sm lg:text-base">
               Services
             </a>
-            <a href="#contact" className="text-white/70 hover:text-white transition-colors">
+            <a href="#contact" className="text-white/70 hover:text-white transition-colors text-sm lg:text-base">
               Contact
             </a>
-            <button className="bg-primary hover:bg-primary-hover text-white font-bold py-2 px-6 rounded-lg transition-colors">
+            <button className="bg-primary hover:bg-primary-hover text-white font-bold py-2 px-4 lg:px-6 rounded-lg transition-colors text-sm lg:text-base">
               Let's Talk
             </button>
           </div>
 
           <button
-            className="md:hidden text-white"
+            className="md:hidden text-white p-2"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             aria-label="Toggle menu"
           >
