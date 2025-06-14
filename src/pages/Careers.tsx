@@ -63,7 +63,7 @@ const Careers = () => {
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage: `url('/lovable-uploads/c2b22091-f5df-48dc-890f-256a9c075909.png')`
+            backgroundImage: `url('/lovable-uploads/3315d1da-0db0-44e6-aa06-cf51796990da.png')`
           }}
         ></div>
         
