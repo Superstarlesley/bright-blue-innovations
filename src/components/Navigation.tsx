@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 
@@ -17,30 +18,32 @@ const Navigation = () => {
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? "bg-white/80 backdrop-blur-md shadow-sm" : "bg-transparent"
+        isScrolled ? "bg-gray-900/90 backdrop-blur-md border-b border-white/10" : "bg-transparent"
       }`}
     >
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
-          <a href="/" className="text-2xl font-bold text-secondary">
+          <a href="/" className="text-2xl font-bold text-white">
             Motswana Intelligence
           </a>
 
           <div className="hidden md:flex items-center space-x-8">
-            <a href="#about" className="nav-link">
+            <a href="#about" className="text-white/70 hover:text-white transition-colors">
               About
             </a>
-            <a href="#services" className="nav-link">
+            <a href="#services" className="text-white/70 hover:text-white transition-colors">
               Services
             </a>
-            <a href="#contact" className="nav-link">
+            <a href="#contact" className="text-white/70 hover:text-white transition-colors">
               Contact
             </a>
-            <button className="button-primary">Let's Talk</button>
+            <button className="bg-primary hover:bg-primary-hover text-white font-bold py-2 px-6 rounded-lg transition-colors">
+              Let's Talk
+            </button>
           </div>
 
           <button
-            className="md:hidden text-secondary"
+            className="md:hidden text-white"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             aria-label="Toggle menu"
           >
@@ -52,26 +55,28 @@ const Navigation = () => {
           <div className="md:hidden pt-4 pb-6 space-y-4 animate-fade-in">
             <a
               href="#about"
-              className="block py-2 text-secondary-light hover:text-secondary transition-colors"
+              className="block py-2 text-white/70 hover:text-white transition-colors"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               About
             </a>
             <a
               href="#services"
-              className="block py-2 text-secondary-light hover:text-secondary transition-colors"
+              className="block py-2 text-white/70 hover:text-white transition-colors"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Services
             </a>
             <a
               href="#contact"
-              className="block py-2 text-secondary-light hover:text-secondary transition-colors"
+              className="block py-2 text-white/70 hover:text-white transition-colors"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Contact
             </a>
-            <button className="button-primary w-full">Let's Talk</button>
+            <button className="bg-primary hover:bg-primary-hover text-white font-bold py-2 px-6 rounded-lg transition-colors w-full">
+              Let's Talk
+            </button>
           </div>
         )}
       </div>

@@ -1,3 +1,4 @@
+
 import { Shield, HardHat, Leaf } from "lucide-react";
 
 const services = [
@@ -25,28 +26,34 @@ const Services = () => {
   return (
     <section
       id="services"
-      className="py-20 px-6 bg-gradient-to-b from-white to-accent"
+      className="py-20 px-6 bg-gray-800"
     >
       <div className="container max-w-6xl mx-auto">
-        <h2 className="section-title text-center">Industries We Serve</h2>
-        <p className="section-subtitle text-center">
-          Tailored solutions for Botswana's key sectors
-        </p>
+        <div className="text-center mb-16">
+          <p className="text-primary text-lg mb-4">So, you like this content?</p>
+          <h2 className="text-5xl md:text-7xl font-black text-white mb-8">
+            Share<br />
+            <span className="text-primary">This!</span>
+          </h2>
+          <p className="text-white/70 text-lg">
+            Industries we serve across Botswana's key sectors
+          </p>
+        </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16">
           {services.map((service, index) => (
             <div
               key={service.title}
-              className="glass-card p-8 rounded-xl opacity-0 animate-fade-up"
+              className="bg-white/5 backdrop-blur-md border border-white/10 p-8 rounded-xl opacity-0 animate-fade-up hover:bg-white/10 transition-colors"
               style={{ animationDelay: `${index * 200}ms` }}
             >
-              <div className="w-16 h-16 rounded-full bg-primary-light flex items-center justify-center text-primary mb-6">
+              <div className="w-16 h-16 rounded-full bg-primary/20 flex items-center justify-center text-primary mb-6 border border-primary/30">
                 {service.icon}
               </div>
-              <h3 className="text-xl font-bold text-secondary mb-4">
+              <h3 className="text-xl font-bold text-white mb-4">
                 {service.title}
               </h3>
-              <p className="text-secondary-light">{service.description}</p>
+              <p className="text-white/70">{service.description}</p>
             </div>
           ))}
         </div>
