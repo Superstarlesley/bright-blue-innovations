@@ -7,7 +7,8 @@ import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
-import { Upload, Send } from "lucide-react";
+import { Send } from "lucide-react";
+import { supabase } from "@/integrations/supabase/client";
 
 const Careers = () => {
   const [formData, setFormData] = useState({
@@ -31,10 +32,21 @@ const Careers = () => {
     setIsSubmitting(true);
 
     try {
-      // Simulate form submission
-      console.log("Career application submitted:", formData);
-      
-      await new Promise(resolve => setTimeout(resolve, 1000));
+      // Save to Supabase
+      const { error } = await supabase
+        .from('career_applications')
+        .insert([{
+          name: formData.name,
+          email: formData.email,
+          position: formData.position || null,
+          message: formData.message
+        }]);
+
+      if (error) {
+        throw error;
+      }
+
+      console.log("Career application submitted to database:", formData);
       
       toast({
         title: "Application sent successfully!",
@@ -43,6 +55,7 @@ const Careers = () => {
       
       setFormData({ name: "", email: "", position: "", message: "" });
     } catch (error) {
+      console.error("Error submitting application:", error);
       toast({
         title: "Something went wrong",
         description: "Please try again or contact us directly.",

@@ -14,6 +14,7 @@ import {
 } from "@/components/ui/dialog";
 import { useToast } from "@/hooks/use-toast";
 import { Mail } from "lucide-react";
+import { supabase } from "@/integrations/supabase/client";
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -37,12 +38,20 @@ const ContactForm = () => {
     setIsSubmitting(true);
 
     try {
-      // For now, we'll simulate form submission
-      // In a real application, you would integrate with an email service
-      console.log("Form submitted:", formData);
-      
-      // Simulate API call delay
-      await new Promise(resolve => setTimeout(resolve, 1000));
+      // Save to Supabase
+      const { error } = await supabase
+        .from('contact_submissions')
+        .insert([{
+          name: formData.name,
+          email: formData.email,
+          message: formData.message
+        }]);
+
+      if (error) {
+        throw error;
+      }
+
+      console.log("Form submitted to database:", formData);
       
       toast({
         title: "Message sent successfully!",
@@ -53,6 +62,7 @@ const ContactForm = () => {
       setFormData({ name: "", email: "", message: "" });
       setIsOpen(false);
     } catch (error) {
+      console.error("Error submitting form:", error);
       toast({
         title: "Something went wrong",
         description: "Please try again or contact us directly.",
@@ -63,15 +73,29 @@ const ContactForm = () => {
     }
   };
 
+  const handleCalendlyClick = () => {
+    // Open Calendly in a new window
+    window.open('https://calendly.com/motswanaintelligence', '_blank', 'width=800,height=700');
+  };
+
   return (
     <Dialog open={isOpen} onOpenChange={setIsOpen}>
       <DialogTrigger asChild>
-        <Button 
-          className="bg-primary hover:bg-primary-hover text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-primary/25 text-lg"
-        >
-          <Mail className="w-5 h-5 mr-2" />
-          Let's Talk
-        </Button>
+        <div className="flex flex-col sm:flex-row gap-3">
+          <Button 
+            className="bg-primary hover:bg-primary-hover text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-primary/25 text-lg"
+          >
+            <Mail className="w-5 h-5 mr-2" />
+            Let's Talk
+          </Button>
+          <Button 
+            onClick={handleCalendlyClick}
+            variant="outline"
+            className="border-primary text-primary hover:bg-primary hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-primary/25 text-lg"
+          >
+            Book a Meeting
+          </Button>
+        </div>
       </DialogTrigger>
       <DialogContent className="sm:max-w-[500px] bg-slate-900 border-white/10">
         <DialogHeader>
