@@ -86,7 +86,7 @@ const Contact = () => {
           <h3 className="text-3xl font-bold text-white mb-8">Get In Touch</h3>
           <p className="text-slate-300 mb-8 text-lg">Ready to transform your business? Let's discuss your project.</p>
           
-          {/* Let's Talk Button */}
+          {/* Get In Touch Button */}
           <div className="mb-12">
             <ContactForm />
           </div>
