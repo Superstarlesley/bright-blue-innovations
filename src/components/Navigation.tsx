@@ -35,6 +35,14 @@ const Navigation = () => {
             <a href="#services" className="text-white/70 hover:text-white transition-colors text-sm lg:text-base">
               Services
             </a>
+            <a 
+              href="https://dikopano.com" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="text-white/70 hover:text-white transition-colors text-sm lg:text-base"
+            >
+              Dikopano
+            </a>
             <a href="/careers" className="text-white/70 hover:text-white transition-colors text-sm lg:text-base">
               Join the Team
             </a>
@@ -70,6 +78,15 @@ const Navigation = () => {
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Services
+            </a>
+            <a
+              href="https://dikopano.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block py-2 text-white/70 hover:text-white transition-colors"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              Dikopano
             </a>
             <a
               href="/careers"
