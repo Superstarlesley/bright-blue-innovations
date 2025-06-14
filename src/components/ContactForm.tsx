@@ -74,9 +74,34 @@ const ContactForm = () => {
     }
   };
 
-  const handleCalendlyClick = () => {
-    // Open Calendly in a new window
-    window.open('https://calendly.com/motswanaintelligence', '_blank', 'width=800,height=700');
+  const handleCalendlyClick = async () => {
+    try {
+      // Send booking notification to company email
+      const { error } = await supabase.functions.invoke('send-booking-notification', {
+        body: {
+          customerName: formData.name || 'Unknown',
+          customerEmail: formData.email || 'Not provided',
+          meetingType: 'General consultation',
+          scheduledTime: 'To be confirmed via Calendly'
+        }
+      });
+
+      if (error) {
+        console.error("Error sending booking notification:", error);
+      }
+
+      // Open Calendly in a new window
+      window.open('https://calendly.com/motswanaintelligence', '_blank', 'width=800,height=700');
+      
+      toast({
+        title: "Calendar opened!",
+        description: "Please select your preferred time slot. We've been notified of your booking request.",
+      });
+    } catch (error) {
+      console.error("Error handling Calendly click:", error);
+      // Still open Calendly even if notification fails
+      window.open('https://calendly.com/motswanaintelligence', '_blank', 'width=800,height=700');
+    }
   };
 
   return (
@@ -103,11 +128,11 @@ const ContactForm = () => {
           <TabsList className="grid w-full grid-cols-2 bg-white/10">
             <TabsTrigger value="message" className="data-[state=active]:bg-primary data-[state=active]:text-white">
               <Mail className="w-4 h-4 mr-2" />
-              Send Message
+              Let's Talk
             </TabsTrigger>
             <TabsTrigger value="meeting" className="data-[state=active]:bg-primary data-[state=active]:text-white">
               <Calendar className="w-4 h-4 mr-2" />
-              Book Meeting
+              Book a Meeting
             </TabsTrigger>
           </TabsList>
           
@@ -188,6 +213,38 @@ const ContactForm = () => {
                 <p className="text-slate-300 mb-6">
                   Book a convenient time to discuss your project in detail with our team.
                 </p>
+                
+                <div className="space-y-4 mb-6">
+                  <div className="space-y-2">
+                    <Label htmlFor="meeting-name" className="text-white font-medium text-left block">
+                      Name (optional)
+                    </Label>
+                    <Input
+                      id="meeting-name"
+                      name="name"
+                      value={formData.name}
+                      onChange={handleChange}
+                      placeholder="Your full name"
+                      className="bg-white/5 border-white/20 text-white placeholder:text-slate-400 focus:border-primary"
+                    />
+                  </div>
+                  
+                  <div className="space-y-2">
+                    <Label htmlFor="meeting-email" className="text-white font-medium text-left block">
+                      Email (optional)
+                    </Label>
+                    <Input
+                      id="meeting-email"
+                      name="email"
+                      type="email"
+                      value={formData.email}
+                      onChange={handleChange}
+                      placeholder="your@email.com"
+                      className="bg-white/5 border-white/20 text-white placeholder:text-slate-400 focus:border-primary"
+                    />
+                  </div>
+                </div>
+                
                 <Button
                   onClick={handleCalendlyClick}
                   className="w-full bg-primary hover:bg-primary-hover text-white font-bold py-3 text-lg"
