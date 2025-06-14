@@ -46,25 +46,20 @@ const Hero = () => {
         {/* Main Content */}
         <div className="mb-12 opacity-0 animate-fade-up [animation-delay:200ms]">
           <div className="mb-6">
-            <p className="text-white/60 text-lg mb-6 font-light tracking-wide">
-              Transforming Botswana's Future with
-            </p>
             <h1
               ref={titleRef}
               className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-black text-white mb-8 leading-[0.9] tracking-tight"
             >
-              Intelligent
+              Motswana
               <br />
               <span className="bg-gradient-to-r from-primary via-blue-400 to-primary bg-clip-text text-transparent animate-pulse">
-                Software
+                Intelligence
               </span>
-              <br />
-              Solutions
             </h1>
           </div>
 
           <p className="text-xl sm:text-2xl text-white/70 max-w-3xl mx-auto mb-12 font-light leading-relaxed">
-            Revolutionizing industries through cutting-edge AI technology and innovative software development
+            Transforming Botswana's future through intelligent software solutions
           </p>
         </div>
 
@@ -83,12 +78,12 @@ const Hero = () => {
           {/* Stats/Features */}
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 mt-16 max-w-4xl mx-auto">
             <div className="text-center">
-              <div className="text-3xl font-bold text-primary mb-2">100+</div>
-              <div className="text-white/60 text-sm uppercase tracking-wider">Projects Delivered</div>
+              <div className="text-3xl font-bold text-primary mb-2">AI</div>
+              <div className="text-white/60 text-sm uppercase tracking-wider">Powered Solutions</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-primary mb-2">3</div>
-              <div className="text-white/60 text-sm uppercase tracking-wider">Key Industries</div>
+              <div className="text-3xl font-bold text-primary mb-2">100%</div>
+              <div className="text-white/60 text-sm uppercase tracking-wider">Botswana Focused</div>
             </div>
             <div className="text-center">
               <div className="text-3xl font-bold text-primary mb-2">24/7</div>
