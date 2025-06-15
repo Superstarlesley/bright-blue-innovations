@@ -1,5 +1,5 @@
 
-import { Shield, HardHat, Leaf } from "lucide-react";
+import { Shield, HardHat, Leaf, HeartPulse, GraduationCap, Truck, Banknote, Landmark } from "lucide-react";
 
 const services = [
   {
@@ -19,6 +19,36 @@ const services = [
     title: "Agriculture",
     description:
       "Innovative tools for crop management, yield optimization, and sustainable farming.",
+  },
+  {
+    icon: <HeartPulse className="w-6 h-6 sm:w-8 sm:h-8" />,
+    title: "Healthcare",
+    description:
+      "Digital platforms for patient records, telemedicine, and hospital management to improve care.",
+  },
+  {
+    icon: <GraduationCap className="w-6 h-6 sm:w-8 sm:h-8" />,
+    title: "Education",
+    description:
+      "E-learning and management solutions for schools, colleges, and enterprises.",
+  },
+  {
+    icon: <Truck className="w-6 h-6 sm:w-8 sm:h-8" />,
+    title: "Supply Chain & Logistics",
+    description:
+      "Tracking, automation, and optimization for efficient logistics and distribution.",
+  },
+  {
+    icon: <Banknote className="w-6 h-6 sm:w-8 sm:h-8" />,
+    title: "Banking & Finance",
+    description:
+      "Secure financial platforms and analytics for banks and fintech organizations.",
+  },
+  {
+    icon: <Landmark className="w-6 h-6 sm:w-8 sm:h-8" />,
+    title: "Tourism & Hospitality",
+    description:
+      "Booking platforms, guest management, and digital guides for the hospitality sector.",
   },
 ];
 
@@ -45,7 +75,7 @@ const Services = () => {
             <div
               key={service.title}
               className="bg-white/5 backdrop-blur-md border border-white/10 p-6 sm:p-8 rounded-xl opacity-0 animate-fade-up hover:bg-white/10 transition-colors"
-              style={{ animationDelay: `${index * 200}ms` }}
+              style={{ animationDelay: `${index * 120}ms` }}
             >
               <div className="w-12 h-12 sm:w-16 sm:h-16 rounded-full bg-primary/20 flex items-center justify-center text-primary mb-4 sm:mb-6 border border-primary/30">
                 {service.icon}
@@ -63,3 +93,4 @@ const Services = () => {
 };
 
 export default Services;
+
