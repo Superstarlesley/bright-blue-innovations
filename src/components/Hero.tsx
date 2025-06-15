@@ -83,10 +83,13 @@ const Hero = () => {
           <div className="flex items-center justify-center mb-8">
             <button 
               onClick={scrollToServices}
-              className="group bg-gradient-to-r from-primary to-blue-600 hover:from-primary-hover hover:to-blue-700 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-primary/25 flex items-center gap-2 text-lg"
+              className="group relative bg-gradient-to-r from-primary to-blue-600 hover:from-primary-hover hover:to-blue-700 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-primary/25 flex items-center gap-2 text-lg overflow-hidden"
             >
-              Explore Our Solutions
-              <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
+              {/* Glowing running effect */}
+              <div className="absolute inset-0 -top-2 -bottom-2 bg-gradient-to-r from-transparent via-white/30 to-transparent w-full h-full animate-[shimmer_2s_infinite] transform -skew-x-12"></div>
+              
+              <span className="relative z-10">Explore Our Solutions</span>
+              <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300 relative z-10" />
             </button>
           </div>
 
