@@ -1,4 +1,5 @@
 
+
 import { useEffect, useRef } from "react";
 import { ChevronRight } from "lucide-react";
 import ContactForm from "./ContactForm";
@@ -112,3 +113,4 @@ const Hero = () => {
 };
 
 export default Hero;
+
