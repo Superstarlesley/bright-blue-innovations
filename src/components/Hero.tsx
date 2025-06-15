@@ -1,6 +1,7 @@
 
 import { useEffect, useRef } from "react";
 import { ChevronRight } from "lucide-react";
+import ContactForm from "./ContactForm";
 
 const Hero = () => {
   const titleRef = useRef<HTMLHeadingElement>(null);
@@ -79,9 +80,7 @@ const Hero = () => {
               Explore Our Solutions
               <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
             </button>
-            <button className="group bg-white/20 hover:bg-white/30 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 backdrop-blur-md border border-white/30 hover:border-white/40 text-lg">
-              Start Your Digital Journey
-            </button>
+            <ContactForm />
           </div>
 
           {/* Stats/Features */}
