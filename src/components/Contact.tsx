@@ -1,5 +1,5 @@
 
-import { Mail, Phone, MapPin, Linkedin } from "lucide-react";
+import { Mail, Phone, MapPin, Linkedin, Lightbulb, Settings } from "lucide-react";
 import ContactForm from "./ContactForm";
 
 const Contact = () => {
@@ -8,13 +8,13 @@ const Contact = () => {
       name: "Michael Mahumba",
       title: "Director of Innovation",
       linkedinUrl: "https://www.linkedin.com/in/michael-mahumba-451bb6363",
-      initials: "MM"
+      icon: Lightbulb
     },
     {
       name: "Thuto Leseane", 
       title: "Chief Operations Officer",
       linkedinUrl: "https://www.linkedin.com/in/thuto-leseane-2b09a7357",
-      initials: "TL"
+      icon: Settings
     }
   ];
 
@@ -33,36 +33,39 @@ const Contact = () => {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-4xl mx-auto">
-            {teamMembers.map((member, index) => (
-              <div 
-                key={member.name}
-                className="bg-white/5 backdrop-blur-md border border-white/10 p-8 rounded-2xl text-center hover:bg-white/8 transition-all duration-300 group"
-              >
-                {/* Profile Image Placeholder */}
-                <div className="w-24 h-24 mx-auto mb-6 bg-gradient-to-br from-primary to-blue-600 rounded-full flex items-center justify-center text-white text-xl font-bold shadow-xl">
-                  {member.initials}
-                </div>
-                
-                {/* Name and Title */}
-                <h3 className="text-2xl font-bold text-white mb-2 tracking-tight">
-                  {member.name}
-                </h3>
-                <p className="text-primary font-medium text-lg mb-6">
-                  {member.title}
-                </p>
-                
-                {/* LinkedIn Link */}
-                <a
-                  href={member.linkedinUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-6 py-3 bg-primary hover:bg-primary-hover text-white font-medium rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-primary/25"
+            {teamMembers.map((member, index) => {
+              const IconComponent = member.icon;
+              return (
+                <div 
+                  key={member.name}
+                  className="bg-white/5 backdrop-blur-md border border-white/10 p-8 rounded-2xl text-center hover:bg-white/8 transition-all duration-300 group"
                 >
-                  <Linkedin className="w-5 h-5" />
-                  Connect on LinkedIn
-                </a>
-              </div>
-            ))}
+                  {/* Profile Icon */}
+                  <div className="w-24 h-24 mx-auto mb-6 bg-gradient-to-br from-primary to-blue-600 rounded-full flex items-center justify-center text-white shadow-xl">
+                    <IconComponent size={32} />
+                  </div>
+                  
+                  {/* Name and Title */}
+                  <h3 className="text-2xl font-bold text-white mb-2 tracking-tight">
+                    {member.name}
+                  </h3>
+                  <p className="text-primary font-medium text-lg mb-6">
+                    {member.title}
+                  </p>
+                  
+                  {/* LinkedIn Link */}
+                  <a
+                    href={member.linkedinUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 px-6 py-3 bg-primary hover:bg-primary-hover text-white font-medium rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-primary/25"
+                  >
+                    <Linkedin className="w-5 h-5" />
+                    Connect on LinkedIn
+                  </a>
+                </div>
+              );
+            })}
           </div>
         </div>
 
