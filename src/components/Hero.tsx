@@ -26,7 +26,15 @@ const Hero = () => {
 
   return (
     <section className="relative min-h-screen flex items-center justify-center pt-20 pb-16 px-4 sm:px-6 lg:px-8 overflow-hidden">
-      {/* Blue Gradient Background */}
+      {/* Zebra Background Image */}
+      <div 
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{
+          backgroundImage: `url('/lovable-uploads/c2b22091-f5df-48dc-890f-256a9c075909.png')`
+        }}
+      ></div>
+      
+      {/* Blue Gradient Overlay */}
       <div className="absolute inset-0 bg-gradient-to-br from-gray-900/90 via-gray-800/85 to-gray-900/90"></div>
       
       {/* Pattern Overlay */}
