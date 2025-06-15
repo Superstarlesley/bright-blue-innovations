@@ -29,14 +29,14 @@ const Services = () => {
       className="py-16 sm:py-20 px-4 sm:px-6 lg:px-8 bg-gray-800"
     >
       <div className="container max-w-6xl mx-auto">
+        {/* New Intro Section */}
         <div className="text-center mb-12 sm:mb-16">
-          <p className="text-primary text-base sm:text-lg mb-3 sm:mb-4">So, you like this content?</p>
           <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-white mb-6 sm:mb-8">
-            Share<br />
-            <span className="text-primary">This!</span>
+            Our Industry Solutions
           </h2>
-          <p className="text-white/70 text-base sm:text-lg px-4">
-            Industries we serve across Botswana's key sectors
+          <p className="text-white/70 text-base sm:text-lg px-4 max-w-3xl mx-auto">
+            Transforming Botswana’s core sectors with purpose-built, scalable digital solutions. 
+            Drive efficiency, boost productivity, and grow your business with technology designed for your unique challenges.
           </p>
         </div>
 
