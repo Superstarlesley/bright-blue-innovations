@@ -1,8 +1,5 @@
-
-
 import { useEffect, useRef } from "react";
 import { ChevronRight } from "lucide-react";
-import ContactForm from "./ContactForm";
 
 const Hero = () => {
   const titleRef = useRef<HTMLHeadingElement>(null);
@@ -76,12 +73,11 @@ const Hero = () => {
 
         {/* CTA Section */}
         <div className="opacity-0 animate-fade-up [animation-delay:600ms]">
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-8">
+          <div className="flex items-center justify-center mb-8">
             <button className="group bg-gradient-to-r from-primary to-blue-600 hover:from-primary-hover hover:to-blue-700 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-primary/25 flex items-center gap-2 text-lg">
               Explore Our Solutions
               <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
             </button>
-            <ContactForm />
           </div>
 
           {/* Stats/Features */}
@@ -113,4 +109,3 @@ const Hero = () => {
 };
 
 export default Hero;
-
